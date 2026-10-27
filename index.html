@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f3ef" />
+    <meta name="description" content="An accessible research microsite explaining a survey of intelligent financial decision-support systems for consumer purchase planning." />
+    <title>Intelligent Financial Decision Support Systems for Consumer Purchase Planning</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-top">
+        <a class="publication-mark" href="#top" aria-label="Research microsite home">
+          <span class="mark-glyph" aria-hidden="true">FD</span>
+          <span><b>Research microsite</b><small>Engineering economics · consumer decision support</small></span>
+        </a>
+        <span class="header-note">A guided reading of the survey paper</span>
+      </div>
+      <nav class="section-nav" aria-label="Microsite sections">
+        <a href="#challenge">The challenge</a>
+        <a href="#economics">Economics</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#evidence">Ten studies</a>
+        <a href="#gaps">Research gaps</a>
+        <a href="#directions">Future directions</a>
+        <a href="#applications">Applications</a>
+        <a href="#references">References</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero page-wrap" id="top" aria-labelledby="paper-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> State-of-the-art survey · Engineering economics framework</p>
+          <h1 id="paper-title">Intelligent Financial Decision Support Systems for Consumer Purchase Planning: A Comprehensive State-of-the-Art Survey and Engineering Economics Framework</h1>
+          <p class="authors">Anish Kashikar <span>·</span> Arsh Patil <span>·</span> Saswat Chouhan <span>·</span> Atharva Ghuge <span>·</span> Mohit Narkhede</p>
+          <div class="hero-summary">
+            <span class="summary-label">Plain-language summary</span>
+            <p>The paper maps forecasting, risk, fuzzy reasoning, recommendations, engineering economics, and user-experience research into a proposed framework for helping people compare major purchases. It is a synthesis and design blueprint, not evidence that one complete consumer financial-advice system has been built and validated.</p>
+          </div>
+          <div class="hero-meta" aria-label="Survey at a glance">
+            <span><b>10</b> reviewed works</span>
+            <span><b>2015–2026</b> publication span</span>
+            <span><b>4</b> architecture layers described, names unspecified</span>
+          </div>
+        </div>
+        <aside class="hero-figure" aria-label="A visual summary of the paper's synthesis">
+          <div class="figure-topline"><span>THE SURVEY'S THROUGH-LINE</span><span class="figure-index">01 / 04</span></div>
+          <div class="synthesis-diagram">
+            <div class="signal-stack">
+              <span>Cash flows</span><span>Prices &amp; rates</span><span>Preferences</span><span>Reviews &amp; text</span>
+            </div>
+            <div class="diagram-connector" aria-hidden="true"><i></i><b>→</b></div>
+            <div class="decision-core">
+              <span class="core-symbol" aria-hidden="true">∑</span>
+              <b>Financial<br />decision support</b>
+              <small>methods + economics</small>
+            </div>
+            <div class="diagram-connector" aria-hidden="true"><i></i><b>→</b></div>
+            <div class="decision-outcomes"><span>Compare options</span><span>See uncertainty</span><span>Keep user in control</span></div>
+          </div>
+          <div class="figure-caption"><span class="caption-number">FIG. 01</span><span>A conceptual reading of the survey, not a measured system diagram.</span></div>
+          <div class="source-distinction"><b>Keep the evidence layers separate</b><span>Individual-study results <i>≠</i> performance of the proposed consumer framework.</span></div>
+        </aside>
+      </section>
+
+      <section class="section-block challenge-section" id="challenge" aria-labelledby="challenge-title">
+        <div class="page-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">01 / The decision problem</p><h2 id="challenge-title">Why consumer purchase planning is difficult</h2></div>
+            <p class="section-deck">The survey frames a household purchase as an uncertain, multi-criteria decision. The same person must make sense of changing conditions, future cash flows, and priorities that resist a single neat score.</p>
+          </div>
+          <div class="challenge-grid">
+            <article class="challenge-card"><span class="card-number">A</span><span class="challenge-icon" aria-hidden="true">≈</span><h3>Markets move</h3><p>Prices, inflation, interest rates, and income can shift while a person is planning. Historical patterns may not describe a non-stationary future.</p><a href="#ref-2">Forecasting context <span>[2]</span></a></article>
+            <article class="challenge-card"><span class="card-number">B</span><span class="challenge-icon" aria-hidden="true">∿</span><h3>Cash flows are uncertain</h3><p>A home, vehicle, or retirement plan unfolds over years. The timing and size of payments, returns, and available cash all matter.</p><a href="#economics">Time value of money <span>↓</span></a></article>
+            <article class="challenge-card"><span class="card-number">C</span><span class="challenge-icon" aria-hidden="true">⌘</span><h3>Signals do not line up</h3><p>Budgets, financing terms, market prices, reviews, and qualitative preferences come in different formats and levels of certainty.</p><a href="#ref-7">Heterogeneous features <span>[7]</span></a></article>
+            <article class="challenge-card"><span class="card-number">D</span><span class="challenge-icon" aria-hidden="true">◌</span><h3>People have limited attention</h3><p>Static spreadsheets and rigid tools can leave users to assemble the analysis themselves, increasing information load and obscuring trade-offs.</p><a href="#ref-5">Visualization and UXBIV <span>[5]</span></a></article>
+          </div>
+          <p class="source-line"><b>Survey framing.</b> These are problems synthesized by the paper from prior work; the four cards are not a new consumer experiment. See also the survey’s discussion of BI architecture <a href="#ref-8">[8]</a>, visualization <a href="#ref-6">[6]</a>, and fuzzy planning <a href="#ref-1">[1]</a>.</p>
+        </div>
+      </section>
+
+      <section class="section-block economics-section" id="economics" aria-labelledby="economics-title">
+        <div class="page-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">02 / Engineering-economics toolkit</p><h2 id="economics-title">Translate the choice into money over time.</h2></div>
+            <p class="section-deck">The paper’s central bridge is engineering economics: make future costs comparable, express competing priorities, and examine how a result changes when assumptions move.</p>
+          </div>
+
+          <div class="economics-layout">
+            <div class="economics-explainer">
+              <article class="equation-card equation-feature">
+                <div class="equation-head"><span class="equation-label">TIME VALUE OF MONEY · TVM</span><a href="#ref-2">Survey equation (1) <span>[2]</span></a></div>
+                <div class="equation">NPV = <span class="sum">Σ</span><sub>t=0</sub><sup>n</sup> <span class="fraction"><i>CF<sub>t</sub></i><b>(1 + r)<sup>t</sup></b></span></div>
+                <p>Discount each future cash flow back to today. A positive cash flow later is worth less today when the discount rate is positive.</p>
+                <div class="term-key"><span><b>CF<sub>t</sub></b> net cash flow in period t</span><span><b>r</b> discount rate</span><span><b>n</b> time horizon</span></div>
+              </article>
+              <div class="equation-grid">
+                <article class="equation-card"><span class="equation-label">INTERNAL RATE OF RETURN · IRR</span><div class="equation equation-small">0 = Σ <span class="fraction"><i>CF<sub>t</sub></i><b>(1 + IRR)<sup>t</sup></b></span></div><p>The rate at which the discounted cash flows break even. Compare it with an appropriate alternative rate; it is not a guarantee of return.</p></article>
+                <article class="equation-card"><span class="equation-label">COST–BENEFIT</span><div class="equation equation-small">Net benefit = benefits − costs</div><p>List the gains and outlays that belong in the decision, then make timing and omitted costs visible.</p></article>
+                <article class="equation-card"><span class="equation-label">PRICE–VALUE TRADE-OFF</span><div class="equation equation-small">PV<sub>i</sub> = Utility<sub>i</sub> − Cost<sub>i</sub></div><p>UTAUT 2’s price-value idea describes a person’s perceived utility relative to monetary cost <a href="#ref-3">[3]</a>.</p></article>
+                <article class="equation-card"><span class="equation-label">MULTI-CRITERIA DECISION · MCDM</span><div class="equation equation-small">Score(option) = Σ w<sub>i</sub> s<sub>i</sub></div><p>Combine criteria such as affordability, security, value, and satisfaction. AHP can derive normalized weights from pairwise importance judgments.</p></article>
+                <article class="equation-card"><span class="equation-label">RISK &amp; SENSITIVITY</span><div class="equation equation-small">Δ result / Δ assumption</div><p>Vary rates, prices, returns, or income assumptions to see where a plan becomes fragile. Fuzzy rules can represent linguistic uncertainty <a href="#ref-1">[1]</a>.</p></article>
+                <article class="equation-card"><span class="equation-label">BUDGET VARIANCE</span><div class="equation equation-small">(Actual − planned) / planned</div><p>Track the percentage difference between actual and planned spending; expose when an option may strain available cash.</p></article>
+              </div>
+              <p class="equation-source-note">Equations and concepts are paraphrased from the supplied survey. The simplified examples below explain the arithmetic; they are not the survey’s empirical results.</p>
+            </div>
+
+            <aside class="calculator-card" aria-labelledby="calculator-title">
+              <div class="calculator-heading"><span class="calculator-mark" aria-hidden="true">∑</span><div><span class="section-kicker">INTERACTIVE EXPLAINER</span><h3 id="calculator-title">A small NPV example</h3></div></div>
+              <p class="calculator-intro">Imagine an illustrative purchase that costs money now and creates the same estimated benefit each year. Adjust the values to see how discounting changes the result.</p>
+              <p class="illustrative-flag"><span aria-hidden="true">✳</span> Illustrative values only · not from a surveyed study</p>
+              <div class="calculator-controls">
+                <div class="calc-field"><div class="calc-label"><label for="calc-cost">Initial cost</label><output id="calc-cost-output" for="calc-cost">₹12 lakh</output></div><input id="calc-cost" type="range" min="5" max="50" step="1" value="12" /></div>
+                <div class="calc-field"><div class="calc-label"><label for="calc-benefit">Annual benefit</label><output id="calc-benefit-output" for="calc-benefit">₹3 lakh</output></div><input id="calc-benefit" type="range" min="1" max="15" step="0.5" value="3" /></div>
+                <div class="calc-field"><div class="calc-label"><label for="calc-rate">Discount rate</label><output id="calc-rate-output" for="calc-rate">8%</output></div><input id="calc-rate" type="range" min="0" max="20" step="0.5" value="8" /></div>
+                <div class="calc-field"><div class="calc-label"><label for="calc-years">Years</label><output id="calc-years-output" for="calc-years">6 years</output></div><input id="calc-years" type="range" min="1" max="15" step="1" value="6" /></div>
+              </div>
+              <div class="calc-results" aria-live="polite" aria-atomic="true">
+                <div class="calc-result-primary"><span>Illustrative net present value</span><b id="calc-npv">—</b><small id="calc-npv-note">Discounted benefits minus initial cost</small></div>
+                <div class="calc-result-secondary"><span>Break-even IRR</span><b id="calc-irr">—</b></div>
+              </div>
+              <div class="cashflow-chart-block">
+                <div class="cashflow-chart-title"><span>Nominal example cash flows</span><span>₹ lakh</span></div>
+                <div class="cashflow-chart-legend"><span><i class="cashflow-dot cost-dot"></i>Initial cost</span><span><i class="cashflow-dot benefit-dot"></i>Annual benefit</span></div>
+                <svg id="economics-chart" viewBox="0 0 500 180" role="img" aria-labelledby="economics-chart-title economics-chart-desc">
+                  <title id="economics-chart-title">Illustrative initial cost and annual benefit cash flows</title>
+                  <desc id="economics-chart-desc">An illustrative chart of one initial cost and recurring yearly benefits.</desc>
+                  <g id="economics-chart-drawing"></g>
+                </svg>
+                <p class="chart-caveat">The chart shows example cash flows, not a forecast or study finding.</p>
+              </div>
+              <details class="calculator-method"><summary>How this example is calculated</summary><p>NPV = −initial cost + the present value of each annual benefit over the selected horizon. IRR is the annual rate that makes that same cash-flow sequence’s NPV equal zero. Taxes, inflation, financing, and other costs are not included.</p></details>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block architecture-section" id="architecture" aria-labelledby="architecture-title">
+        <div class="page-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">03 / Proposed system framing</p><h2 id="architecture-title">A four-layer architecture, carefully labeled.</h2></div>
+            <p class="section-deck">The paper refers to a four-layer microservice architecture. It does not name the layers in the supplied text, so this diagram assigns functional names to explain how its ingredients could connect.</p>
+          </div>
+          <div class="architecture-note"><span class="note-symbol" aria-hidden="true">i</span><p><b>Illustrative interpretation.</b> Layer titles and boundaries below are our explanatory organization, not verbatim layer names or a deployed architecture described by the paper.</p><span class="interpretation-stamp">NOT VERBATIM</span></div>
+          <div class="architecture-flow" aria-label="Illustrative four-layer interpretation of the architecture">
+            <article class="architecture-layer">
+              <div class="layer-number">01</div><div class="layer-content"><div class="layer-title-row"><h3>User-authorized inputs</h3><span class="layer-kind">ILLUSTRATIVE LAYER NAME</span></div><p>Budget and cash-flow assumptions, prices, financing conditions, reviews, and optional user-authorized data access.</p><div class="layer-tags"><span>Heterogeneous signals</span><span>Consent &amp; access control</span><a href="#ref-4">Privacy themes [4]</a></div></div><span class="layer-arrow" aria-hidden="true">↓</span>
+            </article>
+            <article class="architecture-layer">
+              <div class="layer-number">02</div><div class="layer-content"><div class="layer-title-row"><h3>Signal and feature preparation</h3><span class="layer-kind">ILLUSTRATIVE LAYER NAME</span></div><p>Organize time series, structured financial variables, text, behavioral signals, and market context for downstream analysis.</p><div class="layer-tags"><span>Time series</span><span>Text &amp; reviews</span><a href="#ref-7">Feature families [7]</a></div></div><span class="layer-arrow" aria-hidden="true">↓</span>
+            </article>
+            <article class="architecture-layer">
+              <div class="layer-number">03</div><div class="layer-content"><div class="layer-title-row"><h3>Forecasting, risk and decision methods</h3><span class="layer-kind">ILLUSTRATIVE LAYER NAME</span></div><p>Candidate methods from the survey—attention-LSTM, XGBoost, fuzzy inference, and AHP—alongside TVM, NPV, risk, and multi-criteria analysis.</p><div class="layer-tags"><a href="#ref-2">Forecast/risk study [2]</a><a href="#ref-1">Fuzzy planning study [1]</a><span>Engineering economics</span></div></div><span class="layer-arrow" aria-hidden="true">↓</span>
+            </article>
+            <article class="architecture-layer">
+              <div class="layer-number">04</div><div class="layer-content"><div class="layer-title-row"><h3>Visual analytics and explanation</h3><span class="layer-kind">ILLUSTRATIVE LAYER NAME</span></div><p>Present option comparisons, cash-flow timelines, uncertainty, and interpretable factors so a person can inspect and revise the decision.</p><div class="layer-tags"><a href="#ref-5">UXBIV [5]</a><a href="#ref-2">SHAP in prior work [2]</a><span>User control</span></div></div><span class="layer-arrow layer-arrow-end" aria-hidden="true">↘</span>
+            </article>
+          </div>
+          <div class="cross-cutting"><b>Cross-cutting design considerations</b><span>Trust</span><i>·</i><span>Privacy</span><i>·</i><span>Consent</span><i>·</i><span>Explainability</span><i>·</i><span>Cognitive load</span></div>
+          <p class="source-line"><b>Evidence boundary.</b> The four-layer microservice concept is attributed in the survey to Lu et al. <a href="#ref-2">[2]</a>. The layer names above are an information-design interpretation, not a source quotation.</p>
+        </div>
+      </section>
+
+      <section class="section-block evidence-section" id="evidence" aria-labelledby="evidence-title">
+        <div class="page-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">04 / Literature survey</p><h2 id="evidence-title">Ten works, different questions and evidence.</h2></div>
+            <p class="section-deck">The reviewed literature spans corporate finance, consumer technology adoption, recommendation, visualization, business intelligence, scholarly data, and privacy. It is not a set of ten consumer purchase trials.</p>
+          </div>
+          <div class="evidence-timeline"><span class="timeline-label">PUBLICATION SPAN</span><div class="timeline-rule"><i></i></div><span>2015 <b>→</b> 2026</span><p>Study contexts and evidence types differ. Compare like with like.</p></div>
+          <div class="filter-panel">
+            <div class="filter-intro"><span class="filter-symbol" aria-hidden="true">⌕</span><div><b>Explore the survey</b><p>Filter by method, application, evidence type, or proposed FDSS role.</p></div><span class="filter-count" id="study-count" role="status" aria-live="polite">10 works</span></div>
+            <div class="filter-grid">
+              <div class="filter-field"><label for="filter-method">Method</label><select id="filter-method"><option value="all">All methods</option><option value="machine-learning">Machine learning</option><option value="fuzzy-ahp">Fuzzy systems &amp; AHP</option><option value="behavior-models">Consumer behavior models</option><option value="recommendation">Recommender systems</option><option value="visualization">Visualization &amp; UX</option><option value="bi-architecture">BI architecture</option><option value="data-integration">Data integration</option><option value="privacy-search">Privacy &amp; decentralized search</option></select></div>
+              <div class="filter-field"><label for="filter-application">Application</label><select id="filter-application"><option value="all">All applications</option><option value="financial-planning">Financial planning &amp; risk</option><option value="consumer-adoption">Consumer adoption</option><option value="product-recommendation">Product recommendations</option><option value="business-visualization">Business / financial visualization</option><option value="business-intelligence">Business intelligence</option><option value="visualization-tools">Visualization tools</option><option value="scholarly-data">Scholarly data</option><option value="decentralized-systems">Decentralized information systems</option></select></div>
+              <div class="filter-field"><label for="filter-evidence">Evidence type</label><select id="filter-evidence"><option value="all">All evidence types</option><option value="quantitative-benchmark">Quantitative benchmark</option><option value="consumer-survey">Consumer survey</option><option value="user-study">UX / visualization user study</option><option value="literature-survey">Literature or technical survey</option><option value="comparative-review">Comparative systems review</option><option value="workshop">Workshop / research agenda</option></select></div>
+              <div class="filter-field"><label for="filter-role">Relevance to proposed FDSS</label><select id="filter-role"><option value="all">All proposed roles</option><option value="forecasting-risk">Forecasting &amp; risk</option><option value="preferences">Preferences &amp; behavior</option><option value="recommendation-fusion">Recommendation &amp; data fusion</option><option value="visual-ux">Visualization &amp; UX</option><option value="privacy">Privacy &amp; data access</option></select></div>
+            </div>
+            <button class="reset-filters" id="reset-filters" type="button">Reset filters <span aria-hidden="true">↺</span></button>
+          </div>
+
+          <div class="study-grid" id="study-grid" aria-label="Expandable study summaries"></div>
+          <div class="matrix-heading"><div><span class="section-kicker">COMPARATIVE MATRIX</span><h3>What each work contributes—and what it does not establish.</h3></div><p>Reported metrics below belong to the individual study or review as summarized in the supplied paper. They are not pooled or attributed to the proposed consumer FDSS.</p></div>
+          <div class="matrix-desktop">
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable comparative matrix of ten reviewed works">
+              <table class="comparison-table">
+                <caption>Comparative matrix of studies reviewed in the survey</caption>
+                <thead><tr><th scope="col">Study</th><th scope="col">Methods</th><th scope="col">Dataset / scenario</th><th scope="col">Reported metrics or evidence</th><th scope="col">Relevance to proposed FDSS</th></tr></thead>
+                <tbody id="matrix-body"></tbody>
+              </table>
+            </div>
+            <p class="table-help">On narrow screens, use the expandable study cards above for the full comparison.</p>
+          </div>
+          <div class="matrix-mobile" id="matrix-mobile" aria-label="Expandable mobile comparison of reviewed works"></div>
+          <aside class="evidence-caveat"><span class="caveat-mark" aria-hidden="true">!</span><p><b>Read the metrics in context.</b> For example, Lu et al.’s reported 92.3% risk-warning accuracy is a result attributed to that study’s financial model and dataset <a href="#ref-2">[2]</a>. It is not a performance result for the survey’s proposed consumer FDSS.</p></aside>
+          <aside class="source-inconsistency"><b>Source-text note · Reference [1]</b><p>The supplied survey’s prose and Table 1 give different baseline comparators for Zhang et al.’s reported 5.6% false-positive rate. The study card preserves the reported rate and flags the comparator as unresolved; consult the original study before citing that comparison.</p></aside>
+        </div>
+      </section>
+
+      <section class="section-block gaps-section" id="gaps" aria-labelledby="gaps-title">
+        <div class="page-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">05 / Open problems</p><h2 id="gaps-title">Three gaps between model output and a useful decision.</h2></div>
+            <p class="section-deck">The survey’s synthesis points to a mismatch: technically capable methods may still fail to represent consumer behavior, preserve meaning, or support human judgment.</p>
+          </div>
+          <div class="gap-grid">
+            <article class="gap-card"><span class="gap-index">GAP 01</span><div class="gap-diagram" aria-hidden="true"><span>Corporate goals</span><b>≠</b><span>Consumer priorities</span></div><h3>Corporate-to-consumer behavioral gap</h3><p>Methods built for corporate managers and objective measures may not reflect trust, enjoyment, personal priorities, or the way households actually adopt a tool.</p><div class="gap-source">Survey synthesis drawing on <a href="#ref-1">[1]</a> and <a href="#ref-3">[3]</a>.</div></article>
+            <article class="gap-card"><span class="gap-index">GAP 02</span><div class="gap-diagram language-diagram" aria-hidden="true"><span>“Moderately stable”</span><b>→</b><span>?</span></div><h3>Semantic nuance gets flattened</h3><p>Rigid numerical inputs can lose nuance in contracts and everyday language. Static, hand-built fuzzy rules may be difficult to keep current and can encode bias.</p><div class="gap-source">Survey synthesis drawing on <a href="#ref-1">[1]</a> and <a href="#ref-2">[2]</a>.</div></article>
+            <article class="gap-card"><span class="gap-index">GAP 03</span><div class="gap-diagram load-diagram" aria-hidden="true"><i></i><i></i><i></i><i></i><b>!</b><span>attention</span></div><h3>Fast visuals can still overload</h3><p>Visualization research often optimizes latency and scale. A consumer interface also needs to account for attention, cognitive effort, and the risk of information overload.</p><div class="gap-source">Survey synthesis drawing on <a href="#ref-5">[5]</a> and <a href="#ref-6">[6]</a>.</div></article>
+          </div>
+          <p class="source-line"><b>Interpretation.</b> These are research gaps articulated by the survey authors, not resolved findings from a single common experiment.</p>
+        </div>
+      </section>
+
+      <section class="section-block future-section" id="directions" aria-labelledby="directions-title">
+        <div class="page-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">06 / Future research</p><h2 id="directions-title">Promising directions, still proposals.</h2></div>
+            <p class="section-deck">The survey suggests research paths for addressing the gaps. The ideas below are not established capabilities or tested components of a deployed consumer system.</p>
+          </div>
+          <div class="proposal-banner"><span class="proposal-icon" aria-hidden="true">↗</span><b>PROPOSED RESEARCH DIRECTIONS · NOT VALIDATED PRODUCT FEATURES</b></div>
+          <div class="future-grid">
+            <article class="future-card"><span class="future-number">01</span><span class="future-tag">HYBRID MODELING</span><h3>Join deep learning with fuzzy reasoning</h3><p>Explore architectures such as SEM–ANN or GMM–fuzzy systems to combine non-linear patterns with qualitative perceptions and uncertain inputs.</p><div class="future-questions"><b>Research questions</b><span>How are membership rules learned and audited?</span><span>Do hybrids generalize beyond the source datasets?</span></div></article>
+            <article class="future-card"><span class="future-number">02</span><span class="future-tag">LANGUAGE &amp; RULES</span><h3>Use NLP to support fuzzy-rule discovery</h3><p>Investigate financial language models such as FinBERT and semantic encoders to extract candidate variables from contracts, advice, and market text.</p><div class="future-questions"><b>Research questions</b><span>How are source, uncertainty, and context preserved?</span><span>How are errors and bias reviewed by people?</span></div></article>
+            <article class="future-card"><span class="future-number">03</span><span class="future-tag">HUMAN-CENTERED VISUALIZATION</span><h3>Adapt detail to cognitive load</h3><p>Study interfaces that change visual density in response to user needs. The survey discusses interaction, eye-tracking, or EEG signals as possibilities, not deployed features.</p><div class="future-questions"><b>Research questions</b><span>Can adaptive displays improve decision quality?</span><span>Which signals can be gathered with clear consent?</span></div></article>
+          </div>
+          <p class="source-line"><b>Source.</b> These directions summarize Section VI of the supplied survey. Their presence here does not imply that they have been empirically validated for consumer purchase planning.</p>
+        </div>
+      </section>
+
+      <section class="section-block applications-section" id="applications" aria-labelledby="applications-title">
+        <div class="page-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">07 / From framework to use cases</p><h2 id="applications-title">Decisions the framework could help examine.</h2></div>
+            <p class="section-deck">These are practical applications motivated by the survey’s framework. They should not be mistaken for five systems or consumer trials demonstrated by the ten reviewed works.</p>
+          </div>
+          <div class="application-grid">
+            <article class="application-card"><span>01</span><h3>Plan a home purchase</h3><p>Compare down-payment targets, financing costs, affordability, and timing over a chosen horizon.</p><a href="#ref-1">Planning and budget methods [1]</a></article>
+            <article class="application-card"><span>02</span><h3>Evaluate a vehicle decision</h3><p>Place purchase price, financing, ownership costs, and product-value signals side by side.</p><a href="#ref-7">Heterogeneous recommendation [7]</a></article>
+            <article class="application-card"><span>03</span><h3>Compare financing options</h3><p>Translate repayment schedules into cash flows and test how rates or budget assumptions shift the result.</p><a href="#ref-2">Forecasting and risk context [2]</a></article>
+            <article class="application-card"><span>04</span><h3>Consider “buy now” or “wait”</h3><p>Compare the cost of delay, savings accumulated, uncertainty, and the timing of purchase cash flows.</p><a href="#economics">TVM and NPV concepts ↑</a></article>
+            <article class="application-card"><span>05</span><h3>Look farther ahead</h3><p>Frame retirement or other long-term plans as scenarios with competing priorities and uncertain future cash flows.</p><a href="#ref-1">Framework motivation [1]</a></article>
+          </div>
+          <div class="application-caveat"><b>Application boundary</b><span>The survey motivates these consumer use cases; it does not report that each was tested in a consumer-facing FDSS.</span></div>
+        </div>
+      </section>
+
+      <section class="references-section" id="references" aria-labelledby="references-title">
+        <div class="page-wrap references-wrap">
+          <div class="section-heading">
+            <div><p class="section-kicker">08 / Source trail</p><h2 id="references-title">References from the supplied paper</h2></div>
+            <p class="section-deck">Bracketed numbers throughout this microsite follow the reference numbering in the survey. Study summaries link directly to their matching entry.</p>
+          </div>
+          <ol class="reference-list">
+            <li id="ref-1"><span class="reference-number">[1]</span><div><p>R. Zhang, “Fuzzy decision support system for financial planning and management,” <i>Discover Artificial Intelligence</i>, vol. 6, no. 128, pp. 1–27, 2026.</p><a href="https://doi.org/10.1007/s44163-025-00824-6">doi:10.1007/s44163-025-00824-6</a></div></li>
+            <li id="ref-2"><span class="reference-number">[2]</span><div><p>L. Lu, J. Liu, and G. Dong, “Research on algorithm-driven intelligent financial decision support system,” in <i>Proceedings of the 2025 International Conference on Economic Management and Big Data Application (ICEMBDA 2025)</i>, Shenzhen, China: ACM, 2025, pp. 1–6.</p><a href="https://doi.org/10.1145/3770177.3770334">doi:10.1145/3770177.3770334</a></div></li>
+            <li id="ref-3"><span class="reference-number">[3]</span><div><p>R. S. Dixit, S. L. Choudhary, and N. Govil, “Analyzing the impact of artificial intelligence on the online purchase decision-making process through the lens of the UTAUT 2 model,” <i>Discover Computing</i>, vol. 28, no. 88, pp. 1–27, 2025.</p><a href="https://doi.org/10.1007/s10791-025-09575-5">doi:10.1007/s10791-025-09575-5</a></div></li>
+            <li id="ref-4"><span class="reference-number">[4]</span><div><p>T. Tiropanis, G. Roussos, M. Bahrani, and M. Ragab, “DESERE: The 2nd Workshop on Decentralised Search and Recommendation,” in <i>Proceedings of the 34th ACM International Conference on Information and Knowledge Management (CIKM ’25)</i>, Seoul, Republic of Korea, Nov. 10–14, 2025, ACM, New York, NY, USA, 3 pages.</p><a href="https://doi.org/10.1145/3746252.3761602">doi:10.1145/3746252.3761602</a></div></li>
+            <li id="ref-5"><span class="reference-number">[5]</span><div><p>S. Liu, H. Zhang, Z. Yang, J. Kong, L. Zhang, and C. Gao, “UXBIV: An evaluation framework for business intelligence visualization,” <i>IEEE Access</i>, vol. 11, pp. 33004–33018, 2023.</p><a href="https://doi.org/10.1109/ACCESS.2023.3300418">doi:10.1109/ACCESS.2023.3300418</a></div></li>
+            <li id="ref-6"><span class="reference-number">[6]</span><div><p>H. M. Shakeel, S. Iram, H. Al-Aqrabi, T. Alsboui, and R. Hill, “A comprehensive state-of-the-art survey on data visualization tools: Research developments, challenges and future domain specific visualization framework,” <i>IEEE Access</i>, vol. 10, pp. 32051–32066, 2022.</p><a href="https://doi.org/10.1109/ACCESS.2022.3205115">doi:10.1109/ACCESS.2022.3205115</a></div></li>
+            <li id="ref-7"><span class="reference-number">[7]</span><div><p>H. Wang, Z. Le, and X. Gong, “Recommendation system based on heterogeneous feature: A survey,” <i>IEEE Access</i>, vol. 8, pp. 155153–155164, 2020.</p><a href="https://doi.org/10.1109/ACCESS.2020.3024154">doi:10.1109/ACCESS.2020.3024154</a></div></li>
+            <li id="ref-8"><span class="reference-number">[8]</span><div><p>Q. D. Vo, J. Thomas, S. Cho, P. De, B. J. Choi, and L. Sael, “Next generation business intelligence and analytics: A survey,” Stony Brook University Next-Gen BI Survey, pp. 1–15, 2017.</p><a href="https://arxiv.org/abs/1704.03402v1">arXiv:1704.03402v1</a></div></li>
+            <li id="ref-9"><span class="reference-number">[9]</span><div><p>J. Liu, T. Tang, W. Wang, B. Xu, X. Kong, and F. Xia, “A survey of scholarly data visualization,” <i>IEEE Access</i>, vol. 5, pp. 202–215, 2017.</p></div></li>
+            <li id="ref-10"><span class="reference-number">[10]</span><div><p>A. Lugmayr, “Survey of financial market visualization utilizing interactive media technology,” Curtin University VisMedia Technical Survey, pp. 1–15, 2015.</p></div></li>
+          </ol>
+          <p class="references-note">Bibliographic details and numbering reproduce the supplied survey. External links are provided only where a DOI or URL was included in the paper.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-wrap footer-wrap">
+        <div class="footer-publication"><span class="mark-glyph" aria-hidden="true">FD</span><div><b>Research microsite</b><p>An explanatory companion to the supplied survey paper.</p></div></div>
+        <p class="footer-disclaimer"><b>Evidence and scope note.</b> This microsite organizes claims as reported in the supplied paper. It does not independently verify the cited studies, validate the survey’s proposed framework, or provide financial advice. Reported metrics remain attributed to their source study and context.</p>
+        <div class="footer-meta"><span>Research communication · responsive, static microsite</span><a href="#top">Back to the beginning ↑</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
